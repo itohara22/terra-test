@@ -19,9 +19,13 @@ function App() {
 
   return (
     <div className="grid place-items-center min-h-screen">
-      <div className="bg-neutral-600 grid place-items-center relative pt-8">
-        {fetchingState === "error" && <div>Something went wrong</div>}
-        {fetchingState === "loading" && <div>loading...</div>}
+      <div className=" grid place-items-center relative pt-8 min-h-[432px] min-w-[400px] bg-neutral-600">
+        {fetchingState === "error" && (
+          <div className="text-white">Something went wrong</div>
+        )}
+        {fetchingState === "loading" && (
+          <div className="text-white">loading...</div>
+        )}
         {fetchingState === "success" && data && (
           <Wheel
             data={data}

@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .wheel-element {
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+  }
+}
